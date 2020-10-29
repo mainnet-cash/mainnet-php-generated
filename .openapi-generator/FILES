@@ -1,6 +1,7 @@
 .gitignore
 .php_cs
 .travis.yml
+README.md
 docs/Api/MineApi.md
 docs/Api/WalletApi.md
 docs/Model/BalanceRequest.md
