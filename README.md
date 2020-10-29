@@ -28,11 +28,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/mainnet-cash/mainnet-php-generated.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "mainnet-cash/mainnet-php-generated": "*@dev"
   }
 }
 ```
@@ -129,4 +129,3 @@ All endpoints do not require authorization.
 ## Author
 
 hello@mainnet.cash
-
