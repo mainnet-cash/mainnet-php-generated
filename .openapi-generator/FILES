@@ -2,6 +2,7 @@
 .php_cs
 .travis.yml
 README.md
+composer.json
 docs/Api/MineApi.md
 docs/Api/WalletApi.md
 docs/Model/BalanceRequest.md

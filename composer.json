@@ -1,16 +1,21 @@
 {
-    "name": "mainnet/mainnet",
+    "name": "mainnet-cash/mainnet-php-generated",
     "description": "A developer friendly bitcoin cash wallet api  This API is currently in active development, breaking changes may be made prior to official release of version 1.  **Important:** This library is in active development",
     "keywords": [
-        "bitcoin cash"
-        
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
     ],
-    "homepage": "https://mainnet.cash",
-    "license": "MIT",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "High level api for the Bitcoin Cash blockchain",
-            "homepage": "https://mainnet.cash"
+            "name": "OpenAPI-Generator contributors",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
