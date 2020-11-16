@@ -440,7 +440,7 @@ class Configuration
                 "description" => "unstable service (for development)",
             ],
             [
-                "url" => "http://localhost:3000/v1",
+                "url" => "http://localhost:3000/",
                 "description" => "local development server via npm run serve",
             ]
         ];

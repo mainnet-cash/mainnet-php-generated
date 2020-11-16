@@ -66,18 +66,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Mainnet\Api\MineApi(
+$apiInstance = new Mainnet\Api\ContractApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$mine_request = new \Mainnet\Model\MineRequest(); // \Mainnet\Model\MineRequest | 
+$escrow_request = new \Mainnet\Model\EscrowRequest(); // \Mainnet\Model\EscrowRequest | Request a new escrow contract
 
 try {
-    $result = $apiInstance->mine($mine_request);
+    $result = $apiInstance->createEscrow($escrow_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MineApi->mine: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContractApi->createEscrow: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -89,6 +89,9 @@ All URIs are relative to *https://rest-unstable.mainnet.cash*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ContractApi* | [**createEscrow**](docs/Api/ContractApi.md#createescrow) | **POST** /contract/escrow/create | Create an escrow contract
+*ContractApi* | [**escrowFn**](docs/Api/ContractApi.md#escrowfn) | **POST** /contract/escrow/call | Finalize an escrow contract
+*ContractApi* | [**escrowUtxos**](docs/Api/ContractApi.md#escrowutxos) | **POST** /contract/escrow/utxos | List specific utxos in a contract
 *MineApi* | [**mine**](docs/Api/MineApi.md#mine) | **POST** /mine | Mine regtest coins to a specified address
 *WalletApi* | [**balance**](docs/Api/WalletApi.md#balance) | **POST** /wallet/balance | Get total balance for wallet
 *WalletApi* | [**createWallet**](docs/Api/WalletApi.md#createwallet) | **POST** /wallet/create | create a new wallet
@@ -104,7 +107,12 @@ Class | Method | HTTP request | Description
 
  - [BalanceRequest](docs/Model/BalanceRequest.md)
  - [BalanceResponse](docs/Model/BalanceResponse.md)
+ - [Contract](docs/Model/Contract.md)
+ - [ContractFnRequest](docs/Model/ContractFnRequest.md)
+ - [ContractFnResponse](docs/Model/ContractFnResponse.md)
+ - [ContractResponse](docs/Model/ContractResponse.md)
  - [DepositAddressResponse](docs/Model/DepositAddressResponse.md)
+ - [EscrowRequest](docs/Model/EscrowRequest.md)
  - [MaxAmountToSendRequest](docs/Model/MaxAmountToSendRequest.md)
  - [MineRequest](docs/Model/MineRequest.md)
  - [ScalableVectorGraphic](docs/Model/ScalableVectorGraphic.md)
