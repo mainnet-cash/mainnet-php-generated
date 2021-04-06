@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**nftParentGenesis**](WalletSlpApi.md#nftParentGenesis) | **POST** /wallet/slp/nft_parent_genesis | Get created tokenId back and new NFT token balance of the wallet
 [**slpAllBalances**](WalletSlpApi.md#slpAllBalances) | **POST** /wallet/slp/all_balances | Get all slp balances of the wallet
 [**slpBalance**](WalletSlpApi.md#slpBalance) | **POST** /wallet/slp/balance | Get total slp token balance of the wallet
+[**slpCreateWallet**](WalletSlpApi.md#slpCreateWallet) | **POST** /wallet/slp/create | create a new SLP wallet
 [**slpDepositAddress**](WalletSlpApi.md#slpDepositAddress) | **POST** /wallet/slp/deposit_address | Get an SLP deposit address in cash address format
 [**slpDepositQr**](WalletSlpApi.md#slpDepositQr) | **POST** /wallet/slp/deposit_qr | Get an SLP receiving cash address as a qrcode
 [**slpGenesis**](WalletSlpApi.md#slpGenesis) | **POST** /wallet/slp/genesis | Get created tokenId back and new slp token balance of the wallet
@@ -221,6 +222,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Mainnet\Model\SlpBalanceResponse**](../Model/SlpBalanceResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## slpCreateWallet
+
+> \Mainnet\Model\WalletResponse slpCreateWallet($wallet_request)
+
+create a new SLP wallet
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+$apiInstance = new Mainnet\Api\WalletSlpApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$wallet_request = new \Mainnet\Model\WalletRequest(); // \Mainnet\Model\WalletRequest | Request a new SLP wallet
+
+try {
+    $result = $apiInstance->slpCreateWallet($wallet_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WalletSlpApi->slpCreateWallet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **wallet_request** | [**\Mainnet\Model\WalletRequest**](../Model/WalletRequest.md)| Request a new SLP wallet |
+
+### Return type
+
+[**\Mainnet\Model\WalletResponse**](../Model/WalletResponse.md)
 
 ### Authorization
 
