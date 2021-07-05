@@ -1,6 +1,6 @@
 <?php
 /**
- * GetTestnetBchResponse
+ * WalletNamedExistsRequest
  *
  * PHP version 7.2
  *
@@ -28,19 +28,17 @@
  */
 
 namespace Mainnet\Model;
-
-use \ArrayAccess;
 use \Mainnet\ObjectSerializer;
 
 /**
- * GetTestnetBchResponse Class Doc Comment
+ * WalletNamedExistsRequest Class Doc Comment
  *
  * @category Class
  * @package  Mainnet
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class GetTestnetBchResponse implements ModelInterface, ArrayAccess
+class WalletNamedExistsRequest extends NetworkEnum 
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +47,7 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'GetTestnetBchResponse';
+    protected static $openAPIModelName = 'WalletNamedExistsRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +55,8 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tx_id' => 'string'
+        'name' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -66,7 +65,8 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'tx_id' => null
+        'name' => null,
+        'type' => null
     ];
 
     /**
@@ -76,7 +76,7 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -86,7 +86,7 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -96,7 +96,8 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tx_id' => 'txId'
+        'name' => 'name',
+        'type' => 'type'
     ];
 
     /**
@@ -105,7 +106,8 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tx_id' => 'setTxId'
+        'name' => 'setName',
+        'type' => 'setType'
     ];
 
     /**
@@ -114,7 +116,8 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tx_id' => 'getTxId'
+        'name' => 'getName',
+        'type' => 'getType'
     ];
 
     /**
@@ -125,7 +128,7 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -135,7 +138,7 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -145,7 +148,7 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -158,16 +161,29 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const TYPE_WIF = 'wif';
+    const TYPE_HD = 'hd';
+    const TYPE_SEED = 'seed';
+    const TYPE_WATCH = 'watch';
     
 
     
-
     /**
-     * Associative array for storing property values
+     * Gets allowable values of the enum
      *
-     * @var mixed[]
+     * @return string[]
      */
-    protected $container = [];
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_WIF,
+            self::TYPE_HD,
+            self::TYPE_SEED,
+            self::TYPE_WATCH,
+        ];
+    }
+    
+
 
     /**
      * Constructor
@@ -177,7 +193,10 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tx_id'] = isset($data['tx_id']) ? $data['tx_id'] : null;
+        parent::__construct($data);
+
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -187,7 +206,15 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
+
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -205,25 +232,58 @@ class GetTestnetBchResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets tx_id
+     * Gets name
      *
      * @return string|null
      */
-    public function getTxId()
+    public function getName()
     {
-        return $this->container['tx_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets tx_id
+     * Sets name
      *
-     * @param string|null $tx_id Transaction id
+     * @param string|null $name User friendly wallet alias
      *
      * @return $this
      */
-    public function setTxId($tx_id)
+    public function setName($name)
     {
-        $this->container['tx_id'] = $tx_id;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type Wallet type, either a mnemonic seed single address wallet, a simple private key (wif) or a *Hierarchical Deterministic wallet determined from a seed (not yet implemented)* .
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

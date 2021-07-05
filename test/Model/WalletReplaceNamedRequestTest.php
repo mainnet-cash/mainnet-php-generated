@@ -1,6 +1,6 @@
 <?php
 /**
- * SendRequestOptionsTest
+ * WalletReplaceNamedRequestTest
  *
  * PHP version 7.2
  *
@@ -32,15 +32,15 @@ namespace Mainnet;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SendRequestOptionsTest Class Doc Comment
+ * WalletReplaceNamedRequestTest Class Doc Comment
  *
  * @category    Class
- * @description SendRequestOptions
+ * @description WalletReplaceNamedRequest
  * @package     Mainnet
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SendRequestOptionsTest extends TestCase
+class WalletReplaceNamedRequestTest extends TestCase
 {
 
     /**
@@ -72,30 +72,30 @@ class SendRequestOptionsTest extends TestCase
     }
 
     /**
-     * Test "SendRequestOptions"
+     * Test "WalletReplaceNamedRequest"
      */
-    public function testSendRequestOptions()
+    public function testWalletReplaceNamedRequest()
     {
     }
 
     /**
-     * Test attribute "utxo_ids"
+     * Test attribute "name"
      */
-    public function testPropertyUtxoIds()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "change_address"
+     * Test attribute "wallet_id"
      */
-    public function testPropertyChangeAddress()
+    public function testPropertyWalletId()
     {
     }
 
     /**
-     * Test attribute "slp_aware"
+     * Test attribute "type"
      */
-    public function testPropertySlpAware()
+    public function testPropertyType()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SendRequestOptionsTest
+ * WalletNamedExistsRequestTest
  *
  * PHP version 7.2
  *
@@ -32,15 +32,15 @@ namespace Mainnet;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SendRequestOptionsTest Class Doc Comment
+ * WalletNamedExistsRequestTest Class Doc Comment
  *
  * @category    Class
- * @description SendRequestOptions
+ * @description WalletNamedExistsRequest
  * @package     Mainnet
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SendRequestOptionsTest extends TestCase
+class WalletNamedExistsRequestTest extends TestCase
 {
 
     /**
@@ -72,30 +72,23 @@ class SendRequestOptionsTest extends TestCase
     }
 
     /**
-     * Test "SendRequestOptions"
+     * Test "WalletNamedExistsRequest"
      */
-    public function testSendRequestOptions()
+    public function testWalletNamedExistsRequest()
     {
     }
 
     /**
-     * Test attribute "utxo_ids"
+     * Test attribute "name"
      */
-    public function testPropertyUtxoIds()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "change_address"
+     * Test attribute "type"
      */
-    public function testPropertyChangeAddress()
-    {
-    }
-
-    /**
-     * Test attribute "slp_aware"
-     */
-    public function testPropertySlpAware()
+    public function testPropertyType()
     {
     }
 }

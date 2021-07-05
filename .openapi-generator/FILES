@@ -69,6 +69,8 @@ docs/Model/VerifySignedMessageResponse.md
 docs/Model/VerifySignedMessageResponseDetails.md
 docs/Model/WalletInfo.md
 docs/Model/WalletMnemonic.md
+docs/Model/WalletNamedExistsRequest.md
+docs/Model/WalletReplaceNamedRequest.md
 docs/Model/WalletRequest.md
 docs/Model/WalletResponse.md
 docs/Model/WalletType.md
@@ -147,6 +149,8 @@ lib/Model/VerifySignedMessageResponse.php
 lib/Model/VerifySignedMessageResponseDetails.php
 lib/Model/WalletInfo.php
 lib/Model/WalletMnemonic.php
+lib/Model/WalletNamedExistsRequest.php
+lib/Model/WalletReplaceNamedRequest.php
 lib/Model/WalletRequest.php
 lib/Model/WalletResponse.php
 lib/Model/WalletType.php
@@ -222,6 +226,8 @@ test/Model/VerifySignedMessageResponseDetailsTest.php
 test/Model/VerifySignedMessageResponseTest.php
 test/Model/WalletInfoTest.php
 test/Model/WalletMnemonicTest.php
+test/Model/WalletNamedExistsRequestTest.php
+test/Model/WalletReplaceNamedRequestTest.php
 test/Model/WalletRequestTest.php
 test/Model/WalletResponseTest.php
 test/Model/WalletTypeTest.php
