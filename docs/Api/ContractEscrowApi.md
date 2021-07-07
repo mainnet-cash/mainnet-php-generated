@@ -22,10 +22,15 @@ Create an escrow contract
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\ContractEscrowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $escrow_request = new \Mainnet\Model\EscrowRequest(); // \Mainnet\Model\EscrowRequest | Request a new escrow contract from a template
 
@@ -51,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -76,10 +81,15 @@ Finalize an escrow contract
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\ContractEscrowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $escrow_fn_request = new \Mainnet\Model\EscrowFnRequest(); // \Mainnet\Model\EscrowFnRequest | 
 
@@ -105,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

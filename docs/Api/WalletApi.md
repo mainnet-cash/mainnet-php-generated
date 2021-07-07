@@ -33,10 +33,15 @@ Get total balance for wallet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $balance_request = new \Mainnet\Model\BalanceRequest(); // \Mainnet\Model\BalanceRequest | Request for a wallet balance
 
@@ -62,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -87,10 +92,15 @@ create a new wallet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $wallet_request = new \Mainnet\Model\WalletRequest(); // \Mainnet\Model\WalletRequest | Request a new random wallet
 
@@ -116,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -141,10 +151,15 @@ Get a deposit address in cash address format
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $serialized_wallet = new \Mainnet\Model\SerializedWallet(); // \Mainnet\Model\SerializedWallet | Request for a deposit address given a wallet
 
@@ -170,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -195,10 +210,15 @@ Get receiving cash address as a qrcode
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $serialized_wallet = new \Mainnet\Model\SerializedWallet(); // \Mainnet\Model\SerializedWallet | Request for a deposit cash address as a Quick Response code (qrcode)
 
@@ -224,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -249,10 +269,15 @@ Get information about a wallet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $serialized_wallet = new \Mainnet\Model\SerializedWallet(); // \Mainnet\Model\SerializedWallet | The wallet to request information about, in serialized form.
 
@@ -278,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -303,10 +328,15 @@ Get maximum spendable amount
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $max_amount_to_send_request = new \Mainnet\Model\MaxAmountToSendRequest(); // \Mainnet\Model\MaxAmountToSendRequest | get amount that will be spend with a spend max request. If a unit type is specified, a numeric value will be returned.
 
@@ -332,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -357,10 +387,15 @@ Check if a named wallet already exists
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $wallet_named_exists_request = new \Mainnet\Model\WalletNamedExistsRequest(); // \Mainnet\Model\WalletNamedExistsRequest | Request parameters
 
@@ -386,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -411,10 +446,15 @@ Replace (recover) named wallet with a new walletId. If wallet with a provided na
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $wallet_replace_named_request = new \Mainnet\Model\WalletReplaceNamedRequest(); // \Mainnet\Model\WalletReplaceNamedRequest | Request parameters
 
@@ -440,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -465,10 +505,15 @@ Send some amount to a given address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_request = new \Mainnet\Model\SendRequest(); // \Mainnet\Model\SendRequest | place a send request
 
@@ -494,7 +539,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -519,10 +564,15 @@ Send all available funds to a given address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $send_max_request = new \Mainnet\Model\SendMaxRequest(); // \Mainnet\Model\SendMaxRequest | Request to send all available funds to a given address
 
@@ -548,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -573,10 +623,15 @@ Returns the message signature
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $create_signed_message_request = new \Mainnet\Model\CreateSignedMessageRequest(); // \Mainnet\Model\CreateSignedMessageRequest | Sign a message
 
@@ -602,7 +657,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -627,10 +682,15 @@ Returns a boolean indicating whether message was valid for a given address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $verify_signed_message_request = new \Mainnet\Model\VerifySignedMessageRequest(); // \Mainnet\Model\VerifySignedMessageRequest | Sign a message
 
@@ -656,7 +716,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -681,10 +741,15 @@ Get detailed information about unspent outputs (utxos)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WalletApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $serialized_wallet = new \Mainnet\Model\SerializedWallet(); // \Mainnet\Model\SerializedWallet | Request detailed list of unspent transaction outputs
 
@@ -710,7 +775,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

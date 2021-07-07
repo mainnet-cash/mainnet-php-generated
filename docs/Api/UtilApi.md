@@ -21,10 +21,15 @@ convert between units
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\UtilApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $convert_request = new \Mainnet\Model\ConvertRequest(); // \Mainnet\Model\ConvertRequest | 
 
@@ -50,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -21,10 +21,15 @@ Mine regtest coins to a specified address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\MineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $mine_request = new \Mainnet\Model\MineRequest(); // \Mainnet\Model\MineRequest | 
 
@@ -50,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

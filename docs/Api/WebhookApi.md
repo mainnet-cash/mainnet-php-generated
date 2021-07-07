@@ -21,10 +21,15 @@ Create a webhook to watch cashaddress balance and transactions.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new Mainnet\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $watch_address_request = new \Mainnet\Model\WatchAddressRequest(); // \Mainnet\Model\WatchAddressRequest | Based on the 'type' parameter the webhook will be triggered to either post balance or raw transactions to the 'url': - 'transaction:in' for incoming BCH transactions - 'transaction:out' for outgoing BCH transactions - 'transaction:in,out' both for incoming and outgoing BCH transactions - 'balance' will post the object according to 'BalanceResponse' schema - 'slptransaction:in' for incoming SLP transactions - 'slptransaction:out' for outgoing SLP transactions - 'slptransaction:in,out' both for incoming and outgoing SLP transactions - 'slpbalance' will post the object according to 'SlpBalanceResponse' schema  'tokenId' parameter is mandatory when using SLP webhooks.
 
@@ -50,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
