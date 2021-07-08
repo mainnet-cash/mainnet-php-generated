@@ -10,6 +10,7 @@ docs/Api/MineApi.md
 docs/Api/UtilApi.md
 docs/Api/WalletApi.md
 docs/Api/WalletSlpApi.md
+docs/Api/WalletUtilApi.md
 docs/Api/WebhookApi.md
 docs/Model/BalanceRequest.md
 docs/Model/BalanceResponse.md
@@ -22,6 +23,11 @@ docs/Model/ContractResponse.md
 docs/Model/ConvertRequest.md
 docs/Model/CreateSignedMessageRequest.md
 docs/Model/DepositAddressResponse.md
+docs/Model/ElectrumRawTransaction.md
+docs/Model/ElectrumRawTransactionScriptPubKey.md
+docs/Model/ElectrumRawTransactionScriptSig.md
+docs/Model/ElectrumRawTransactionVin.md
+docs/Model/ElectrumRawTransactionVout.md
 docs/Model/Error.md
 docs/Model/EscrowFnRequest.md
 docs/Model/EscrowRequest.md
@@ -62,6 +68,7 @@ docs/Model/SlpTokenInfoResponseItem.md
 docs/Model/SlpUtxo.md
 docs/Model/SlpUtxoResponse.md
 docs/Model/UnitType.md
+docs/Model/UtilDecodeTransactionRequest.md
 docs/Model/Utxo.md
 docs/Model/UtxoResponse.md
 docs/Model/VerifySignedMessageRequest.md
@@ -86,6 +93,7 @@ lib/Api/MineApi.php
 lib/Api/UtilApi.php
 lib/Api/WalletApi.php
 lib/Api/WalletSlpApi.php
+lib/Api/WalletUtilApi.php
 lib/Api/WebhookApi.php
 lib/ApiException.php
 lib/Configuration.php
@@ -101,6 +109,11 @@ lib/Model/ContractResponse.php
 lib/Model/ConvertRequest.php
 lib/Model/CreateSignedMessageRequest.php
 lib/Model/DepositAddressResponse.php
+lib/Model/ElectrumRawTransaction.php
+lib/Model/ElectrumRawTransactionScriptPubKey.php
+lib/Model/ElectrumRawTransactionScriptSig.php
+lib/Model/ElectrumRawTransactionVin.php
+lib/Model/ElectrumRawTransactionVout.php
 lib/Model/Error.php
 lib/Model/EscrowFnRequest.php
 lib/Model/EscrowRequest.php
@@ -142,6 +155,7 @@ lib/Model/SlpTokenInfoResponseItem.php
 lib/Model/SlpUtxo.php
 lib/Model/SlpUtxoResponse.php
 lib/Model/UnitType.php
+lib/Model/UtilDecodeTransactionRequest.php
 lib/Model/Utxo.php
 lib/Model/UtxoResponse.php
 lib/Model/VerifySignedMessageRequest.php
@@ -167,6 +181,7 @@ test/Api/MineApiTest.php
 test/Api/UtilApiTest.php
 test/Api/WalletApiTest.php
 test/Api/WalletSlpApiTest.php
+test/Api/WalletUtilApiTest.php
 test/Api/WebhookApiTest.php
 test/Model/BalanceRequestTest.php
 test/Model/BalanceResponseTest.php
@@ -179,6 +194,11 @@ test/Model/ContractTest.php
 test/Model/ConvertRequestTest.php
 test/Model/CreateSignedMessageRequestTest.php
 test/Model/DepositAddressResponseTest.php
+test/Model/ElectrumRawTransactionScriptPubKeyTest.php
+test/Model/ElectrumRawTransactionScriptSigTest.php
+test/Model/ElectrumRawTransactionTest.php
+test/Model/ElectrumRawTransactionVinTest.php
+test/Model/ElectrumRawTransactionVoutTest.php
 test/Model/ErrorTest.php
 test/Model/EscrowFnRequestTest.php
 test/Model/EscrowRequestTest.php
@@ -219,6 +239,7 @@ test/Model/SlpTokenInfoResponseItemTest.php
 test/Model/SlpUtxoResponseTest.php
 test/Model/SlpUtxoTest.php
 test/Model/UnitTypeTest.php
+test/Model/UtilDecodeTransactionRequestTest.php
 test/Model/UtxoResponseTest.php
 test/Model/UtxoTest.php
 test/Model/VerifySignedMessageRequestTest.php
