@@ -18,6 +18,8 @@ docs/Model/CashscriptReceipt.md
 docs/Model/Contract.md
 docs/Model/ContractFnRequest.md
 docs/Model/ContractFnResponse.md
+docs/Model/ContractInfoRequest.md
+docs/Model/ContractInfoResponse.md
 docs/Model/ContractRequest.md
 docs/Model/ContractResponse.md
 docs/Model/ConvertRequest.md
@@ -104,6 +106,8 @@ lib/Model/CashscriptReceipt.php
 lib/Model/Contract.php
 lib/Model/ContractFnRequest.php
 lib/Model/ContractFnResponse.php
+lib/Model/ContractInfoRequest.php
+lib/Model/ContractInfoResponse.php
 lib/Model/ContractRequest.php
 lib/Model/ContractResponse.php
 lib/Model/ConvertRequest.php
@@ -188,6 +192,8 @@ test/Model/BalanceResponseTest.php
 test/Model/CashscriptReceiptTest.php
 test/Model/ContractFnRequestTest.php
 test/Model/ContractFnResponseTest.php
+test/Model/ContractInfoRequestTest.php
+test/Model/ContractInfoResponseTest.php
 test/Model/ContractRequestTest.php
 test/Model/ContractResponseTest.php
 test/Model/ContractTest.php
