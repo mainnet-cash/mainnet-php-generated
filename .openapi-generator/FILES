@@ -64,7 +64,7 @@ docs/Model/SlpSendRequestItem.md
 docs/Model/SlpSendRequestOptions.md
 docs/Model/SlpSendResponse.md
 docs/Model/SlpTokenInfoRequest.md
-docs/Model/SlpTokenInfoResponseItem.md
+docs/Model/SlpTokenInfoResponse.md
 docs/Model/SlpUtxo.md
 docs/Model/SlpUtxoResponse.md
 docs/Model/UnitType.md
@@ -151,7 +151,7 @@ lib/Model/SlpSendRequestItem.php
 lib/Model/SlpSendRequestOptions.php
 lib/Model/SlpSendResponse.php
 lib/Model/SlpTokenInfoRequest.php
-lib/Model/SlpTokenInfoResponseItem.php
+lib/Model/SlpTokenInfoResponse.php
 lib/Model/SlpUtxo.php
 lib/Model/SlpUtxoResponse.php
 lib/Model/UnitType.php
@@ -235,7 +235,7 @@ test/Model/SlpSendRequestOptionsTest.php
 test/Model/SlpSendRequestTest.php
 test/Model/SlpSendResponseTest.php
 test/Model/SlpTokenInfoRequestTest.php
-test/Model/SlpTokenInfoResponseItemTest.php
+test/Model/SlpTokenInfoResponseTest.php
 test/Model/SlpUtxoResponseTest.php
 test/Model/SlpUtxoTest.php
 test/Model/UnitTypeTest.php

@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 ## slpTokenInfo
 
-> \Mainnet\Model\SlpTokenInfoResponseItem slpTokenInfo($slp_token_info_request)
+> \Mainnet\Model\SlpTokenInfoResponse slpTokenInfo($slp_token_info_request)
 
 Get information about the token
 
@@ -772,7 +772,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mainnet\Model\SlpTokenInfoResponseItem**](../Model/SlpTokenInfoResponseItem.md)
+[**\Mainnet\Model\SlpTokenInfoResponse**](../Model/SlpTokenInfoResponse.md)
 
 ### Authorization
 
