@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blockhash** | **string** |  | [optional] 
 **blocktime** | **float** |  | [optional] 
-**configrmations** | **float** |  | [optional] 
+**confirmations** | **float** |  | [optional] 
 **hash** | **string** |  | [optional] 
 **hex** | **string** |  | [optional] 
 **locktime** | **float** |  | [optional] 
