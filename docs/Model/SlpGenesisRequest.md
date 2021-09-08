@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **wallet_id** | **string** | ID that is returned in &#x60;wallet&#x60; field of /wallet call | 
-**name** | **string** |  | 
+**name** | **string** | Token name | 
 **ticker** | **string** | Token ticker | 
 **initial_amount** | **string** | Value is represented as a string to avoid precision loss | 
 **decimals** | **float** | Indicates that 1 token is divisible into 10^decimals base units | 

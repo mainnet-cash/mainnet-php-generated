@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional] 
+**name** | **string** | Token name | [optional] 
 **ticker** | **string** | Token ticker | [optional] 
 **token_id** | **string** |  | [optional] 
 **initial_amount** | **string** | Value is represented as a string to avoid precision loss | [optional] 
