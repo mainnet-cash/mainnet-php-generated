@@ -44,6 +44,10 @@ docs/Model/EscrowResponse.md
 docs/Model/GetAddressesResponse.md
 docs/Model/GetTestnetBchRequest.md
 docs/Model/GetTestnetBchResponse.md
+docs/Model/GetTestnetSbchRequest.md
+docs/Model/GetTestnetSbchResponse.md
+docs/Model/GetTestnetSep20Request.md
+docs/Model/GetTestnetSep20Response.md
 docs/Model/GetTestnetSlpRequest.md
 docs/Model/GetTestnetSlpResponse.md
 docs/Model/MaxAmountToSendRequest.md
@@ -98,6 +102,7 @@ docs/Model/SmartBchSendRequestItem.md
 docs/Model/SmartBchSendRequestItemAnyOf.md
 docs/Model/SmartBchSendRequestOptions.md
 docs/Model/SmartBchSendResponseItem.md
+docs/Model/SmartBchSep20AllBalancesRequest.md
 docs/Model/SmartBchSep20BalanceRequest.md
 docs/Model/SmartBchSep20BalanceResponse.md
 docs/Model/SmartBchSep20GenesisRequest.md
@@ -172,6 +177,10 @@ lib/Model/EscrowResponse.php
 lib/Model/GetAddressesResponse.php
 lib/Model/GetTestnetBchRequest.php
 lib/Model/GetTestnetBchResponse.php
+lib/Model/GetTestnetSbchRequest.php
+lib/Model/GetTestnetSbchResponse.php
+lib/Model/GetTestnetSep20Request.php
+lib/Model/GetTestnetSep20Response.php
 lib/Model/GetTestnetSlpRequest.php
 lib/Model/GetTestnetSlpResponse.php
 lib/Model/MaxAmountToSendRequest.php
@@ -227,6 +236,7 @@ lib/Model/SmartBchSendRequestItem.php
 lib/Model/SmartBchSendRequestItemAnyOf.php
 lib/Model/SmartBchSendRequestOptions.php
 lib/Model/SmartBchSendResponseItem.php
+lib/Model/SmartBchSep20AllBalancesRequest.php
 lib/Model/SmartBchSep20BalanceRequest.php
 lib/Model/SmartBchSep20BalanceResponse.php
 lib/Model/SmartBchSep20GenesisRequest.php
@@ -299,6 +309,10 @@ test/Model/EscrowResponseTest.php
 test/Model/GetAddressesResponseTest.php
 test/Model/GetTestnetBchRequestTest.php
 test/Model/GetTestnetBchResponseTest.php
+test/Model/GetTestnetSbchRequestTest.php
+test/Model/GetTestnetSbchResponseTest.php
+test/Model/GetTestnetSep20RequestTest.php
+test/Model/GetTestnetSep20ResponseTest.php
 test/Model/GetTestnetSlpRequestTest.php
 test/Model/GetTestnetSlpResponseTest.php
 test/Model/MaxAmountToSendRequestTest.php
@@ -353,6 +367,7 @@ test/Model/SmartBchSendRequestItemTest.php
 test/Model/SmartBchSendRequestOptionsTest.php
 test/Model/SmartBchSendRequestTest.php
 test/Model/SmartBchSendResponseItemTest.php
+test/Model/SmartBchSep20AllBalancesRequestTest.php
 test/Model/SmartBchSep20BalanceRequestTest.php
 test/Model/SmartBchSep20BalanceResponseTest.php
 test/Model/SmartBchSep20GenesisRequestTest.php

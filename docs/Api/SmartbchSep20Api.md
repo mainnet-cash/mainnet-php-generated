@@ -4,6 +4,7 @@ All URIs are relative to *https://rest-unstable.mainnet.cash*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**smartBchSep20AllBalances**](SmartbchSep20Api.md#smartBchSep20AllBalances) | **POST** /smartbch/sep20/all_balances | Get all SmartBch SEP20 balances of the wallet
 [**smartBchSep20Balance**](SmartbchSep20Api.md#smartBchSep20Balance) | **POST** /smartbch/sep20/balance | Get total SmartBch SEP20 token balance of the wallet
 [**smartBchSep20DepositAddress**](SmartbchSep20Api.md#smartBchSep20DepositAddress) | **POST** /smartbch/sep20/deposit_address | Get an SmartBch SEP20 deposit address
 [**smartBchSep20DepositQr**](SmartbchSep20Api.md#smartBchSep20DepositQr) | **POST** /smartbch/sep20/deposit_qr | Get an SmartBch SEP20 receiving address as a qrcode
@@ -13,6 +14,65 @@ Method | HTTP request | Description
 [**smartBchSep20SendMax**](SmartbchSep20Api.md#smartBchSep20SendMax) | **POST** /smartbch/sep20/send_max | Send all available SmartBch SEP20 token funds to a given address
 [**smartBchSep20TokenInfo**](SmartbchSep20Api.md#smartBchSep20TokenInfo) | **POST** /smartbch/sep20/token_info | Get information about the SmartBch SEP20 token
 
+
+
+## smartBchSep20AllBalances
+
+> \Mainnet\Model\SmartBchSep20BalanceResponse[] smartBchSep20AllBalances($smart_bch_sep20_all_balances_request)
+
+Get all SmartBch SEP20 balances of the wallet
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\SmartbchSep20Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$smart_bch_sep20_all_balances_request = new \Mainnet\Model\SmartBchSep20AllBalancesRequest(); // \Mainnet\Model\SmartBchSep20AllBalancesRequest | Request for a wallet SEP20 token balances. Does a deep blockchain scan for tokens transferred to or from this address Might take a long time to run and time-out.
+
+try {
+    $result = $apiInstance->smartBchSep20AllBalances($smart_bch_sep20_all_balances_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SmartbchSep20Api->smartBchSep20AllBalances: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **smart_bch_sep20_all_balances_request** | [**\Mainnet\Model\SmartBchSep20AllBalancesRequest**](../Model/SmartBchSep20AllBalancesRequest.md)| Request for a wallet SEP20 token balances. Does a deep blockchain scan for tokens transferred to or from this address Might take a long time to run and time-out. |
+
+### Return type
+
+[**\Mainnet\Model\SmartBchSep20BalanceResponse[]**](../Model/SmartBchSep20BalanceResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
 
 ## smartBchSep20Balance
