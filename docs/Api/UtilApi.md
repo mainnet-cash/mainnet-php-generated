@@ -5,6 +5,8 @@ All URIs are relative to *https://rest-unstable.mainnet.cash*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convert**](UtilApi.md#convert) | **POST** /util/convert | convert between units
+[**getAddrsByXpubKey**](UtilApi.md#getAddrsByXpubKey) | **POST** /util/get_addrs_by_xpubkey | Derive heristic determined addresses from an extended public key, per BIP32
+[**getXpubKeyInfo**](UtilApi.md#getXpubKeyInfo) | **POST** /util/get_xpubkey_info | Decode information about an extended public key, per BIP32
 
 
 
@@ -61,6 +63,124 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getAddrsByXpubKey
+
+> AnyOfString[] getAddrsByXpubKey($get_addrs_by_xpub_key_request)
+
+Derive heristic determined addresses from an extended public key, per BIP32
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\UtilApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$get_addrs_by_xpub_key_request = new \Mainnet\Model\GetAddrsByXpubKeyRequest(); // \Mainnet\Model\GetAddrsByXpubKeyRequest | 
+
+try {
+    $result = $apiInstance->getAddrsByXpubKey($get_addrs_by_xpub_key_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UtilApi->getAddrsByXpubKey: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **get_addrs_by_xpub_key_request** | [**\Mainnet\Model\GetAddrsByXpubKeyRequest**](../Model/GetAddrsByXpubKeyRequest.md)|  | [optional]
+
+### Return type
+
+[**AnyOfString[]**](../Model/AnyOfString.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: text/plain
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getXpubKeyInfo
+
+> \Mainnet\Model\GetXpubKeyInfoResponse getXpubKeyInfo($get_xpub_key_info_request)
+
+Decode information about an extended public key, per BIP32
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\UtilApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$get_xpub_key_info_request = new \Mainnet\Model\GetXpubKeyInfoRequest(); // \Mainnet\Model\GetXpubKeyInfoRequest | Decode information about an extended public key, per BIP32
+
+try {
+    $result = $apiInstance->getXpubKeyInfo($get_xpub_key_info_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UtilApi->getXpubKeyInfo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **get_xpub_key_info_request** | [**\Mainnet\Model\GetXpubKeyInfoRequest**](../Model/GetXpubKeyInfoRequest.md)| Decode information about an extended public key, per BIP32 |
+
+### Return type
+
+[**\Mainnet\Model\GetXpubKeyInfoResponse**](../Model/GetXpubKeyInfoResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../../README.md#documentation-for-models)

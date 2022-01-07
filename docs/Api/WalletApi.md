@@ -14,9 +14,8 @@ Method | HTTP request | Description
 [**replaceNamed**](WalletApi.md#replaceNamed) | **POST** /wallet/replace_named | Replace (recover) named wallet with a new walletId. If wallet with a provided name does not exist yet, it will be creted with a &#x60;walletId&#x60; supplied If wallet exists it will be overwritten without exception
 [**send**](WalletApi.md#send) | **POST** /wallet/send | Send some amount to a given address
 [**sendMax**](WalletApi.md#sendMax) | **POST** /wallet/send_max | Send all available funds to a given address
-[**signedMessageSign**](WalletApi.md#signedMessageSign) | **POST** /wallet/signed/sign | Returns the message signature
-[**signedMessageVerify**](WalletApi.md#signedMessageVerify) | **POST** /wallet/signed/verify | Returns a boolean indicating whether message was valid for a given address
 [**utxos**](WalletApi.md#utxos) | **POST** /wallet/utxo | Get detailed information about unspent outputs (utxos)
+[**xpubkeys**](WalletApi.md#xpubkeys) | **POST** /wallet/xpubkeys | A set of xpubkeys and paths for the wallet.
 
 
 
@@ -610,124 +609,6 @@ Name | Type | Description  | Notes
 [[Back to README]](../../README.md)
 
 
-## signedMessageSign
-
-> \Mainnet\Model\SignedMessageResponse signedMessageSign($create_signed_message_request)
-
-Returns the message signature
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Mainnet\Api\WalletApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$create_signed_message_request = new \Mainnet\Model\CreateSignedMessageRequest(); // \Mainnet\Model\CreateSignedMessageRequest | Sign a message
-
-try {
-    $result = $apiInstance->signedMessageSign($create_signed_message_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WalletApi->signedMessageSign: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **create_signed_message_request** | [**\Mainnet\Model\CreateSignedMessageRequest**](../Model/CreateSignedMessageRequest.md)| Sign a message | [optional]
-
-### Return type
-
-[**\Mainnet\Model\SignedMessageResponse**](../Model/SignedMessageResponse.md)
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## signedMessageVerify
-
-> \Mainnet\Model\VerifySignedMessageResponse signedMessageVerify($verify_signed_message_request)
-
-Returns a boolean indicating whether message was valid for a given address
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Mainnet\Api\WalletApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$verify_signed_message_request = new \Mainnet\Model\VerifySignedMessageRequest(); // \Mainnet\Model\VerifySignedMessageRequest | Sign a message
-
-try {
-    $result = $apiInstance->signedMessageVerify($verify_signed_message_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WalletApi->signedMessageVerify: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **verify_signed_message_request** | [**\Mainnet\Model\VerifySignedMessageRequest**](../Model/VerifySignedMessageRequest.md)| Sign a message | [optional]
-
-### Return type
-
-[**\Mainnet\Model\VerifySignedMessageResponse**](../Model/VerifySignedMessageResponse.md)
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
 ## utxos
 
 > \Mainnet\Model\UtxoResponse utxos($serialized_wallet)
@@ -772,6 +653,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Mainnet\Model\UtxoResponse**](../Model/UtxoResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## xpubkeys
+
+> \Mainnet\Model\XPubKeyResponse xpubkeys($x_pub_key_request)
+
+A set of xpubkeys and paths for the wallet.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$x_pub_key_request = new \Mainnet\Model\XPubKeyRequest(); // \Mainnet\Model\XPubKeyRequest | x
+
+try {
+    $result = $apiInstance->xpubkeys($x_pub_key_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WalletApi->xpubkeys: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_pub_key_request** | [**\Mainnet\Model\XPubKeyRequest**](../Model/XPubKeyRequest.md)| x |
+
+### Return type
+
+[**\Mainnet\Model\XPubKeyResponse**](../Model/XPubKeyResponse.md)
 
 ### Authorization
 

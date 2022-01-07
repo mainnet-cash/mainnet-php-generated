@@ -13,6 +13,7 @@ docs/Api/SmartbchSep20Api.md
 docs/Api/SmartbchWalletApi.md
 docs/Api/UtilApi.md
 docs/Api/WalletApi.md
+docs/Api/WalletSignedApi.md
 docs/Api/WalletSlpApi.md
 docs/Api/WalletUtilApi.md
 docs/Api/WebhookApi.md
@@ -42,6 +43,7 @@ docs/Model/EscrowInfoResponse.md
 docs/Model/EscrowRequest.md
 docs/Model/EscrowResponse.md
 docs/Model/GetAddressesResponse.md
+docs/Model/GetAddrsByXpubKeyRequest.md
 docs/Model/GetTestnetBchRequest.md
 docs/Model/GetTestnetBchResponse.md
 docs/Model/GetTestnetSbchRequest.md
@@ -50,6 +52,8 @@ docs/Model/GetTestnetSep20Request.md
 docs/Model/GetTestnetSep20Response.md
 docs/Model/GetTestnetSlpRequest.md
 docs/Model/GetTestnetSlpResponse.md
+docs/Model/GetXpubKeyInfoRequest.md
+docs/Model/GetXpubKeyInfoResponse.md
 docs/Model/MaxAmountToSendRequest.md
 docs/Model/MineRequest.md
 docs/Model/NetworkEnum.md
@@ -132,6 +136,9 @@ docs/Model/WalletType.md
 docs/Model/WatchAddressRequest.md
 docs/Model/WatchAddressResponse.md
 docs/Model/Wif.md
+docs/Model/XPubKey.md
+docs/Model/XPubKeyRequest.md
+docs/Model/XPubKeyResponse.md
 docs/Model/ZeroBalanceResponse.md
 git_push.sh
 lib/Api/ContractApi.php
@@ -143,6 +150,7 @@ lib/Api/SmartbchSep20Api.php
 lib/Api/SmartbchWalletApi.php
 lib/Api/UtilApi.php
 lib/Api/WalletApi.php
+lib/Api/WalletSignedApi.php
 lib/Api/WalletSlpApi.php
 lib/Api/WalletUtilApi.php
 lib/Api/WebhookApi.php
@@ -175,6 +183,7 @@ lib/Model/EscrowInfoResponse.php
 lib/Model/EscrowRequest.php
 lib/Model/EscrowResponse.php
 lib/Model/GetAddressesResponse.php
+lib/Model/GetAddrsByXpubKeyRequest.php
 lib/Model/GetTestnetBchRequest.php
 lib/Model/GetTestnetBchResponse.php
 lib/Model/GetTestnetSbchRequest.php
@@ -183,6 +192,8 @@ lib/Model/GetTestnetSep20Request.php
 lib/Model/GetTestnetSep20Response.php
 lib/Model/GetTestnetSlpRequest.php
 lib/Model/GetTestnetSlpResponse.php
+lib/Model/GetXpubKeyInfoRequest.php
+lib/Model/GetXpubKeyInfoResponse.php
 lib/Model/MaxAmountToSendRequest.php
 lib/Model/MineRequest.php
 lib/Model/ModelInterface.php
@@ -266,6 +277,9 @@ lib/Model/WalletType.php
 lib/Model/WatchAddressRequest.php
 lib/Model/WatchAddressResponse.php
 lib/Model/Wif.php
+lib/Model/XPubKey.php
+lib/Model/XPubKeyRequest.php
+lib/Model/XPubKeyResponse.php
 lib/Model/ZeroBalanceResponse.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
@@ -278,6 +292,7 @@ test/Api/SmartbchSep20ApiTest.php
 test/Api/SmartbchWalletApiTest.php
 test/Api/UtilApiTest.php
 test/Api/WalletApiTest.php
+test/Api/WalletSignedApiTest.php
 test/Api/WalletSlpApiTest.php
 test/Api/WalletUtilApiTest.php
 test/Api/WebhookApiTest.php
@@ -307,6 +322,7 @@ test/Model/EscrowInfoResponseTest.php
 test/Model/EscrowRequestTest.php
 test/Model/EscrowResponseTest.php
 test/Model/GetAddressesResponseTest.php
+test/Model/GetAddrsByXpubKeyRequestTest.php
 test/Model/GetTestnetBchRequestTest.php
 test/Model/GetTestnetBchResponseTest.php
 test/Model/GetTestnetSbchRequestTest.php
@@ -315,6 +331,8 @@ test/Model/GetTestnetSep20RequestTest.php
 test/Model/GetTestnetSep20ResponseTest.php
 test/Model/GetTestnetSlpRequestTest.php
 test/Model/GetTestnetSlpResponseTest.php
+test/Model/GetXpubKeyInfoRequestTest.php
+test/Model/GetXpubKeyInfoResponseTest.php
 test/Model/MaxAmountToSendRequestTest.php
 test/Model/MineRequestTest.php
 test/Model/NetworkEnumTest.php
@@ -397,4 +415,7 @@ test/Model/WalletTypeTest.php
 test/Model/WatchAddressRequestTest.php
 test/Model/WatchAddressResponseTest.php
 test/Model/WifTest.php
+test/Model/XPubKeyRequestTest.php
+test/Model/XPubKeyResponseTest.php
+test/Model/XPubKeyTest.php
 test/Model/ZeroBalanceResponseTest.php
