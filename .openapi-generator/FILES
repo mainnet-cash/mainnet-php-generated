@@ -35,6 +35,7 @@ docs/Model/ElectrumRawTransactionScriptPubKey.md
 docs/Model/ElectrumRawTransactionScriptSig.md
 docs/Model/ElectrumRawTransactionVin.md
 docs/Model/ElectrumRawTransactionVout.md
+docs/Model/EncodeTransactionResponse.md
 docs/Model/Error.md
 docs/Model/EscrowContract.md
 docs/Model/EscrowFnRequest.md
@@ -119,6 +120,8 @@ docs/Model/SmartBchSep20SendRequestItem.md
 docs/Model/SmartBchSep20TokenInfoRequest.md
 docs/Model/SmartBchSep20TokenInfoResponse.md
 docs/Model/SmartBchTransactionReceipt.md
+docs/Model/SubmitTransactionRequest.md
+docs/Model/SubmitTransactionResponse.md
 docs/Model/UnitType.md
 docs/Model/UtilDecodeTransactionRequest.md
 docs/Model/Utxo.md
@@ -175,6 +178,7 @@ lib/Model/ElectrumRawTransactionScriptPubKey.php
 lib/Model/ElectrumRawTransactionScriptSig.php
 lib/Model/ElectrumRawTransactionVin.php
 lib/Model/ElectrumRawTransactionVout.php
+lib/Model/EncodeTransactionResponse.php
 lib/Model/Error.php
 lib/Model/EscrowContract.php
 lib/Model/EscrowFnRequest.php
@@ -260,6 +264,8 @@ lib/Model/SmartBchSep20SendRequestItem.php
 lib/Model/SmartBchSep20TokenInfoRequest.php
 lib/Model/SmartBchSep20TokenInfoResponse.php
 lib/Model/SmartBchTransactionReceipt.php
+lib/Model/SubmitTransactionRequest.php
+lib/Model/SubmitTransactionResponse.php
 lib/Model/UnitType.php
 lib/Model/UtilDecodeTransactionRequest.php
 lib/Model/Utxo.php
@@ -314,6 +320,7 @@ test/Model/ElectrumRawTransactionScriptSigTest.php
 test/Model/ElectrumRawTransactionTest.php
 test/Model/ElectrumRawTransactionVinTest.php
 test/Model/ElectrumRawTransactionVoutTest.php
+test/Model/EncodeTransactionResponseTest.php
 test/Model/ErrorTest.php
 test/Model/EscrowContractTest.php
 test/Model/EscrowFnRequestTest.php
@@ -398,6 +405,8 @@ test/Model/SmartBchSep20SendRequestTest.php
 test/Model/SmartBchSep20TokenInfoRequestTest.php
 test/Model/SmartBchSep20TokenInfoResponseTest.php
 test/Model/SmartBchTransactionReceiptTest.php
+test/Model/SubmitTransactionRequestTest.php
+test/Model/SubmitTransactionResponseTest.php
 test/Model/UnitTypeTest.php
 test/Model/UtilDecodeTransactionRequestTest.php
 test/Model/UtxoResponseTest.php
