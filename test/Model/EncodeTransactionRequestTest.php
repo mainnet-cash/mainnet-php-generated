@@ -1,6 +1,6 @@
 <?php
 /**
- * SlpTokenInfoRequestTest
+ * EncodeTransactionRequestTest
  *
  * PHP version 7.2
  *
@@ -32,15 +32,15 @@ namespace Mainnet;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SlpTokenInfoRequestTest Class Doc Comment
+ * EncodeTransactionRequestTest Class Doc Comment
  *
  * @category    Class
- * @description SlpTokenInfoRequest
+ * @description EncodeTransactionRequest
  * @package     Mainnet
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SlpTokenInfoRequestTest extends TestCase
+class EncodeTransactionRequestTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class SlpTokenInfoRequestTest extends TestCase
     }
 
     /**
-     * Test "SlpTokenInfoRequest"
+     * Test "EncodeTransactionRequest"
      */
-    public function testSlpTokenInfoRequest()
+    public function testEncodeTransactionRequest()
     {
     }
 
@@ -86,9 +86,23 @@ class SlpTokenInfoRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "token_id"
+     * Test attribute "discard_change"
      */
-    public function testPropertyTokenId()
+    public function testPropertyDiscardChange()
+    {
+    }
+
+    /**
+     * Test attribute "to"
+     */
+    public function testPropertyTo()
+    {
+    }
+
+    /**
+     * Test attribute "options"
+     */
+    public function testPropertyOptions()
     {
     }
 }

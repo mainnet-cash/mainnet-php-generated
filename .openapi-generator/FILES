@@ -35,6 +35,7 @@ docs/Model/ElectrumRawTransactionScriptPubKey.md
 docs/Model/ElectrumRawTransactionScriptSig.md
 docs/Model/ElectrumRawTransactionVin.md
 docs/Model/ElectrumRawTransactionVout.md
+docs/Model/EncodeTransactionRequest.md
 docs/Model/EncodeTransactionResponse.md
 docs/Model/Error.md
 docs/Model/EscrowContract.md
@@ -178,6 +179,7 @@ lib/Model/ElectrumRawTransactionScriptPubKey.php
 lib/Model/ElectrumRawTransactionScriptSig.php
 lib/Model/ElectrumRawTransactionVin.php
 lib/Model/ElectrumRawTransactionVout.php
+lib/Model/EncodeTransactionRequest.php
 lib/Model/EncodeTransactionResponse.php
 lib/Model/Error.php
 lib/Model/EscrowContract.php
@@ -320,6 +322,7 @@ test/Model/ElectrumRawTransactionScriptSigTest.php
 test/Model/ElectrumRawTransactionTest.php
 test/Model/ElectrumRawTransactionVinTest.php
 test/Model/ElectrumRawTransactionVoutTest.php
+test/Model/EncodeTransactionRequestTest.php
 test/Model/EncodeTransactionResponseTest.php
 test/Model/ErrorTest.php
 test/Model/EscrowContractTest.php

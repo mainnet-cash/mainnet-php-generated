@@ -1,6 +1,6 @@
 <?php
 /**
- * SmartBchSep20SendRequestItem
+ * EncodeTransactionRequest
  *
  * PHP version 7.2
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Mainnet\ObjectSerializer;
 
 /**
- * SmartBchSep20SendRequestItem Class Doc Comment
+ * EncodeTransactionRequest Class Doc Comment
  *
  * @category Class
  * @package  Mainnet
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
+class EncodeTransactionRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SmartBchSep20SendRequestItem';
+    protected static $openAPIModelName = 'EncodeTransactionRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,10 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => 'string',
-        'value' => 'AnyOfNumberString',
-        'token_id' => 'string'
+        'wallet_id' => 'string',
+        'discard_change' => 'bool',
+        'to' => 'AnyOfSendRequestItemArrayOpReturnData',
+        'options' => '\Mainnet\Model\SendRequestOptions'
     ];
 
     /**
@@ -68,9 +69,10 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'address' => null,
-        'value' => null,
-        'token_id' => null
+        'wallet_id' => null,
+        'discard_change' => null,
+        'to' => null,
+        'options' => null
     ];
 
     /**
@@ -100,9 +102,10 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address' => 'address',
-        'value' => 'value',
-        'token_id' => 'tokenId'
+        'wallet_id' => 'walletId',
+        'discard_change' => 'discardChange',
+        'to' => 'to',
+        'options' => 'options'
     ];
 
     /**
@@ -111,9 +114,10 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address' => 'setAddress',
-        'value' => 'setValue',
-        'token_id' => 'setTokenId'
+        'wallet_id' => 'setWalletId',
+        'discard_change' => 'setDiscardChange',
+        'to' => 'setTo',
+        'options' => 'setOptions'
     ];
 
     /**
@@ -122,9 +126,10 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address' => 'getAddress',
-        'value' => 'getValue',
-        'token_id' => 'getTokenId'
+        'wallet_id' => 'getWalletId',
+        'discard_change' => 'getDiscardChange',
+        'to' => 'getTo',
+        'options' => 'getOptions'
     ];
 
     /**
@@ -187,9 +192,10 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['token_id'] = isset($data['token_id']) ? $data['token_id'] : null;
+        $this->container['wallet_id'] = isset($data['wallet_id']) ? $data['wallet_id'] : null;
+        $this->container['discard_change'] = isset($data['discard_change']) ? $data['discard_change'] : false;
+        $this->container['to'] = isset($data['to']) ? $data['to'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
     }
 
     /**
@@ -201,15 +207,6 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['address'] === null) {
-            $invalidProperties[] = "'address' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-        if ($this->container['token_id'] === null) {
-            $invalidProperties[] = "'token_id' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,73 +223,97 @@ class SmartBchSep20SendRequestItem implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets address
+     * Gets wallet_id
      *
-     * @return string
+     * @return string|null
      */
-    public function getAddress()
+    public function getWalletId()
     {
-        return $this->container['address'];
+        return $this->container['wallet_id'];
     }
 
     /**
-     * Sets address
+     * Sets wallet_id
      *
-     * @param string $address address
+     * @param string|null $wallet_id The walletId of the source of funds to spend from.
      *
      * @return $this
      */
-    public function setAddress($address)
+    public function setWalletId($wallet_id)
     {
-        $this->container['address'] = $address;
+        $this->container['wallet_id'] = $wallet_id;
 
         return $this;
     }
 
     /**
-     * Gets value
+     * Gets discard_change
      *
-     * @return AnyOfNumberString
+     * @return bool|null
      */
-    public function getValue()
+    public function getDiscardChange()
     {
-        return $this->container['value'];
+        return $this->container['discard_change'];
     }
 
     /**
-     * Sets value
+     * Sets discard_change
      *
-     * @param AnyOfNumberString $value value
+     * @param bool|null $discard_change discard_change
      *
      * @return $this
      */
-    public function setValue($value)
+    public function setDiscardChange($discard_change)
     {
-        $this->container['value'] = $value;
+        $this->container['discard_change'] = $discard_change;
 
         return $this;
     }
 
     /**
-     * Gets token_id
+     * Gets to
      *
-     * @return string
+     * @return AnyOfSendRequestItemArrayOpReturnData|null
      */
-    public function getTokenId()
+    public function getTo()
     {
-        return $this->container['token_id'];
+        return $this->container['to'];
     }
 
     /**
-     * Sets token_id
+     * Sets to
      *
-     * @param string $token_id Token unique hexadecimal identifier
+     * @param AnyOfSendRequestItemArrayOpReturnData|null $to to
      *
      * @return $this
      */
-    public function setTokenId($token_id)
+    public function setTo($to)
     {
-        $this->container['token_id'] = $token_id;
+        $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
+     * Gets options
+     *
+     * @return \Mainnet\Model\SendRequestOptions|null
+     */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+     * Sets options
+     *
+     * @param \Mainnet\Model\SendRequestOptions|null $options options
+     *
+     * @return $this
+     */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
 
         return $this;
     }

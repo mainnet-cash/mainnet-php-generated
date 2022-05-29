@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ## encodeTransaction
 
-> \Mainnet\Model\EncodeTransactionResponse encodeTransaction($send_request)
+> \Mainnet\Model\EncodeTransactionResponse encodeTransaction($encode_transaction_request)
 
 Encode and sign a transaction given a list of sendRequests, options and estimate fees
 
@@ -280,10 +280,10 @@ $apiInstance = new Mainnet\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$send_request = new \Mainnet\Model\SendRequest(); // \Mainnet\Model\SendRequest | encode a transaction
+$encode_transaction_request = new \Mainnet\Model\EncodeTransactionRequest(); // \Mainnet\Model\EncodeTransactionRequest | encode a transaction
 
 try {
-    $result = $apiInstance->encodeTransaction($send_request);
+    $result = $apiInstance->encodeTransaction($encode_transaction_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->encodeTransaction: ', $e->getMessage(), PHP_EOL;
@@ -296,7 +296,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **send_request** | [**\Mainnet\Model\SendRequest**](../Model/SendRequest.md)| encode a transaction |
+ **encode_transaction_request** | [**\Mainnet\Model\EncodeTransactionRequest**](../Model/EncodeTransactionRequest.md)| encode a transaction |
 
 ### Return type
 
