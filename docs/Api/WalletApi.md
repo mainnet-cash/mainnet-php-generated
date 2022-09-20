@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**depositAddress**](WalletApi.md#depositAddress) | **POST** /wallet/deposit_address | Get a deposit address in cash address format
 [**depositQr**](WalletApi.md#depositQr) | **POST** /wallet/deposit_qr | Get receiving cash address as a qrcode
 [**encodeTransaction**](WalletApi.md#encodeTransaction) | **POST** /wallet/encode_transaction | Encode and sign a transaction given a list of sendRequests, options and estimate fees
+[**getHistory**](WalletApi.md#getHistory) | **POST** /wallet/get_history | Get a simplified list of transactions related to a wallet
 [**info**](WalletApi.md#info) | **POST** /wallet/info | Get information about a wallet
 [**maxAmountToSend**](WalletApi.md#maxAmountToSend) | **POST** /wallet/max_amount_to_send | Get maximum spendable amount
 [**namedExists**](WalletApi.md#namedExists) | **POST** /wallet/named_exists | Check if a named wallet already exists
@@ -301,6 +302,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Mainnet\Model\EncodeTransactionResponse**](../Model/EncodeTransactionResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getHistory
+
+> \Mainnet\Model\HistoryResponse getHistory($history_request)
+
+Get a simplified list of transactions related to a wallet
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$history_request = new \Mainnet\Model\HistoryRequest(); // \Mainnet\Model\HistoryRequest | Request for a wallet history
+
+try {
+    $result = $apiInstance->getHistory($history_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WalletApi->getHistory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **history_request** | [**\Mainnet\Model\HistoryRequest**](../Model/HistoryRequest.md)| Request for a wallet history |
+
+### Return type
+
+[**\Mainnet\Model\HistoryResponse**](../Model/HistoryResponse.md)
 
 ### Authorization
 

@@ -56,6 +56,8 @@ docs/Model/GetTestnetSlpRequest.md
 docs/Model/GetTestnetSlpResponse.md
 docs/Model/GetXpubKeyInfoRequest.md
 docs/Model/GetXpubKeyInfoResponse.md
+docs/Model/HistoryRequest.md
+docs/Model/HistoryResponse.md
 docs/Model/MaxAmountToSendRequest.md
 docs/Model/MineRequest.md
 docs/Model/NetworkEnum.md
@@ -123,6 +125,7 @@ docs/Model/SmartBchSep20TokenInfoResponse.md
 docs/Model/SmartBchTransactionReceipt.md
 docs/Model/SubmitTransactionRequest.md
 docs/Model/SubmitTransactionResponse.md
+docs/Model/TransactionHistoryItem.md
 docs/Model/UnitType.md
 docs/Model/UtilDecodeTransactionRequest.md
 docs/Model/Utxo.md
@@ -200,6 +203,8 @@ lib/Model/GetTestnetSlpRequest.php
 lib/Model/GetTestnetSlpResponse.php
 lib/Model/GetXpubKeyInfoRequest.php
 lib/Model/GetXpubKeyInfoResponse.php
+lib/Model/HistoryRequest.php
+lib/Model/HistoryResponse.php
 lib/Model/MaxAmountToSendRequest.php
 lib/Model/MineRequest.php
 lib/Model/ModelInterface.php
@@ -268,6 +273,7 @@ lib/Model/SmartBchSep20TokenInfoResponse.php
 lib/Model/SmartBchTransactionReceipt.php
 lib/Model/SubmitTransactionRequest.php
 lib/Model/SubmitTransactionResponse.php
+lib/Model/TransactionHistoryItem.php
 lib/Model/UnitType.php
 lib/Model/UtilDecodeTransactionRequest.php
 lib/Model/Utxo.php
@@ -343,6 +349,8 @@ test/Model/GetTestnetSlpRequestTest.php
 test/Model/GetTestnetSlpResponseTest.php
 test/Model/GetXpubKeyInfoRequestTest.php
 test/Model/GetXpubKeyInfoResponseTest.php
+test/Model/HistoryRequestTest.php
+test/Model/HistoryResponseTest.php
 test/Model/MaxAmountToSendRequestTest.php
 test/Model/MineRequestTest.php
 test/Model/NetworkEnumTest.php
@@ -410,6 +418,7 @@ test/Model/SmartBchSep20TokenInfoResponseTest.php
 test/Model/SmartBchTransactionReceiptTest.php
 test/Model/SubmitTransactionRequestTest.php
 test/Model/SubmitTransactionResponseTest.php
+test/Model/TransactionHistoryItemTest.php
 test/Model/UnitTypeTest.php
 test/Model/UtilDecodeTransactionRequestTest.php
 test/Model/UtxoResponseTest.php
