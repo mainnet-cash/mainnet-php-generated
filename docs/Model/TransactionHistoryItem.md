@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **to** | **string** | cashaddr of the receiving cash address. | [optional] 
-**from** | **string** | cashaddr of the sending cash address. | [optional] 
+**from** | **string** | cashadd of the sending cash address. | [optional] 
 **unit** | [**\Mainnet\Model\UnitType**](UnitType.md) |  | [optional] 
 **index** | **float** | the index of the input or output in the transaction | [optional] 
 **blockheight** | **float** | the blockheight of transaction | [optional] 

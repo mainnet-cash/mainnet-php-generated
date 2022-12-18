@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cashaddr** | **string** |  | [optional] 
-**tokenaddr** | **string** |  | [optional] 
 **is_testnet** | **bool** | Whether the agreed value of the network is zero. True for all non-mainnet networks. | [optional] 
 **name** | **string** |  | [optional] 
 **public_key** | **string** |  | [optional] 
