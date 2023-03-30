@@ -141,7 +141,7 @@ docs/Model/TransactionHistoryItem.md
 docs/Model/UnitType.md
 docs/Model/UtilDecodeTransactionRequest.md
 docs/Model/Utxo.md
-docs/Model/UtxoResponse.md
+docs/Model/UtxoToken.md
 docs/Model/VerifySignedMessageRequest.md
 docs/Model/VerifySignedMessageResponse.md
 docs/Model/VerifySignedMessageResponseDetails.md
@@ -301,7 +301,7 @@ lib/Model/TransactionHistoryItem.php
 lib/Model/UnitType.php
 lib/Model/UtilDecodeTransactionRequest.php
 lib/Model/Utxo.php
-lib/Model/UtxoResponse.php
+lib/Model/UtxoToken.php
 lib/Model/VerifySignedMessageRequest.php
 lib/Model/VerifySignedMessageResponse.php
 lib/Model/VerifySignedMessageResponseDetails.php
@@ -457,8 +457,8 @@ test/Model/TokenSendRequestTest.php
 test/Model/TransactionHistoryItemTest.php
 test/Model/UnitTypeTest.php
 test/Model/UtilDecodeTransactionRequestTest.php
-test/Model/UtxoResponseTest.php
 test/Model/UtxoTest.php
+test/Model/UtxoTokenTest.php
 test/Model/VerifySignedMessageRequestTest.php
 test/Model/VerifySignedMessageResponseDetailsTest.php
 test/Model/VerifySignedMessageResponseTest.php

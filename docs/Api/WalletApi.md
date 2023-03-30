@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 
 ## getTokenUtxos
 
-> \Mainnet\Model\UtxoResponse getTokenUtxos($inline_object)
+> \Mainnet\Model\Utxo[] getTokenUtxos($inline_object)
 
 Get token utxos
 
@@ -665,7 +665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mainnet\Model\UtxoResponse**](../Model/UtxoResponse.md)
+[**\Mainnet\Model\Utxo[]**](../Model/Utxo.md)
 
 ### Authorization
 
@@ -1391,7 +1391,7 @@ Name | Type | Description  | Notes
 
 ## utxos
 
-> \Mainnet\Model\UtxoResponse utxos($serialized_wallet)
+> \Mainnet\Model\Utxo[] utxos($serialized_wallet)
 
 Get detailed information about unspent outputs (utxos)
 
@@ -1432,7 +1432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mainnet\Model\UtxoResponse**](../Model/UtxoResponse.md)
+[**\Mainnet\Model\Utxo[]**](../Model/Utxo.md)
 
 ### Authorization
 

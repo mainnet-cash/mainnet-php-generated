@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **script** | **string** | The smart contract in cashscript syntax | [optional] 
 **parameters** | **string[]** | Parameters passed when the contract was created | [optional] 
 **cashaddr** | **string** |  | [optional] 
+**tokenaddr** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

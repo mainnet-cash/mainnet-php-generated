@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ## contractUtxos
 
-> \Mainnet\Model\UtxoResponse contractUtxos($contract)
+> \Mainnet\Model\Utxo[] contractUtxos($contract)
 
 List specific utxos on any contract
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mainnet\Model\UtxoResponse**](../Model/UtxoResponse.md)
+[**\Mainnet\Model\Utxo[]**](../Model/Utxo.md)
 
 ### Authorization
 

@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ## escrowUtxos
 
-> \Mainnet\Model\UtxoResponse escrowUtxos($escrow_contract)
+> \Mainnet\Model\Utxo[] escrowUtxos($escrow_contract)
 
 List specific utxos on any escrow contract
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mainnet\Model\UtxoResponse**](../Model/UtxoResponse.md)
+[**\Mainnet\Model\Utxo[]**](../Model/Utxo.md)
 
 ### Authorization
 
