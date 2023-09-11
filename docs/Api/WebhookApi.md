@@ -31,7 +31,7 @@ $apiInstance = new Mainnet\Api\WebhookApi(
     new GuzzleHttp\Client(),
     $config
 );
-$watch_address_request = new \Mainnet\Model\WatchAddressRequest(); // \Mainnet\Model\WatchAddressRequest | Based on the 'type' parameter the webhook will be triggered to either post balance or raw transactions to the 'url': - 'transaction:in' for incoming BCH transactions - 'transaction:out' for outgoing BCH transactions - 'transaction:in,out' both for incoming and outgoing BCH transactions - 'balance' will post the object according to 'BalanceResponse' schema - 'slptransaction:in' for incoming SLP transactions - 'slptransaction:out' for outgoing SLP transactions - 'slptransaction:in,out' both for incoming and outgoing SLP transactions - 'slpbalance' will post the object according to 'SlpBalanceResponse' schema  'tokenId' parameter is mandatory when using SLP webhooks.
+$watch_address_request = new \Mainnet\Model\WatchAddressRequest(); // \Mainnet\Model\WatchAddressRequest | Based on the 'type' parameter the webhook will be triggered to either post balance or raw transactions to the 'url': - 'transaction:in' for incoming BCH transactions - 'transaction:out' for outgoing BCH transactions - 'transaction:in,out' both for incoming and outgoing BCH transactions - 'balance' will post the object according to 'BalanceResponse' schema
 
 try {
     $result = $apiInstance->watchAddress($watch_address_request);
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **watch_address_request** | [**\Mainnet\Model\WatchAddressRequest**](../Model/WatchAddressRequest.md)| Based on the &#39;type&#39; parameter the webhook will be triggered to either post balance or raw transactions to the &#39;url&#39;: - &#39;transaction:in&#39; for incoming BCH transactions - &#39;transaction:out&#39; for outgoing BCH transactions - &#39;transaction:in,out&#39; both for incoming and outgoing BCH transactions - &#39;balance&#39; will post the object according to &#39;BalanceResponse&#39; schema - &#39;slptransaction:in&#39; for incoming SLP transactions - &#39;slptransaction:out&#39; for outgoing SLP transactions - &#39;slptransaction:in,out&#39; both for incoming and outgoing SLP transactions - &#39;slpbalance&#39; will post the object according to &#39;SlpBalanceResponse&#39; schema  &#39;tokenId&#39; parameter is mandatory when using SLP webhooks. |
+ **watch_address_request** | [**\Mainnet\Model\WatchAddressRequest**](../Model/WatchAddressRequest.md)| Based on the &#39;type&#39; parameter the webhook will be triggered to either post balance or raw transactions to the &#39;url&#39;: - &#39;transaction:in&#39; for incoming BCH transactions - &#39;transaction:out&#39; for outgoing BCH transactions - &#39;transaction:in,out&#39; both for incoming and outgoing BCH transactions - &#39;balance&#39; will post the object according to &#39;BalanceResponse&#39; schema |
 
 ### Return type
 
