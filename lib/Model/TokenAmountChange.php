@@ -1,6 +1,6 @@
 <?php
 /**
- * GetXpubKeyInfoRequest
+ * TokenAmountChange
  *
  * PHP version 7.2
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Mainnet\ObjectSerializer;
 
 /**
- * GetXpubKeyInfoRequest Class Doc Comment
+ * TokenAmountChange Class Doc Comment
  *
  * @category Class
  * @package  Mainnet
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
+class TokenAmountChange implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'getXpubKeyInfoRequest';
+    protected static $openAPIModelName = 'TokenAmountChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,9 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'xpubkey' => 'string'
+        'token_id' => 'string',
+        'amount' => 'float',
+        'nft_amount' => 'float'
     ];
 
     /**
@@ -66,7 +68,9 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'xpubkey' => null
+        'token_id' => null,
+        'amount' => null,
+        'nft_amount' => null
     ];
 
     /**
@@ -96,7 +100,9 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'xpubkey' => 'xpubkey'
+        'token_id' => 'tokenId',
+        'amount' => 'amount',
+        'nft_amount' => 'nftAmount'
     ];
 
     /**
@@ -105,7 +111,9 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'xpubkey' => 'setXpubkey'
+        'token_id' => 'setTokenId',
+        'amount' => 'setAmount',
+        'nft_amount' => 'setNftAmount'
     ];
 
     /**
@@ -114,7 +122,9 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'xpubkey' => 'getXpubkey'
+        'token_id' => 'getTokenId',
+        'amount' => 'getAmount',
+        'nft_amount' => 'getNftAmount'
     ];
 
     /**
@@ -177,7 +187,9 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['xpubkey'] = isset($data['xpubkey']) ? $data['xpubkey'] : null;
+        $this->container['token_id'] = isset($data['token_id']) ? $data['token_id'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['nft_amount'] = isset($data['nft_amount']) ? $data['nft_amount'] : null;
     }
 
     /**
@@ -205,25 +217,73 @@ class GetXpubKeyInfoRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets xpubkey
+     * Gets token_id
      *
      * @return string|null
      */
-    public function getXpubkey()
+    public function getTokenId()
     {
-        return $this->container['xpubkey'];
+        return $this->container['token_id'];
     }
 
     /**
-     * Sets xpubkey
+     * Sets token_id
      *
-     * @param string|null $xpubkey xpubkey
+     * @param string|null $token_id Token unique hexadecimal identifier, also the id of the token creation transaction
      *
      * @return $this
      */
-    public function setXpubkey($xpubkey)
+    public function setTokenId($token_id)
     {
-        $this->container['xpubkey'] = $xpubkey;
+        $this->container['token_id'] = $token_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return float|null
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param float|null $amount Fungible token amount
+     *
+     * @return $this
+     */
+    public function setAmount($amount)
+    {
+        $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets nft_amount
+     *
+     * @return float|null
+     */
+    public function getNftAmount()
+    {
+        return $this->container['nft_amount'];
+    }
+
+    /**
+     * Sets nft_amount
+     *
+     * @param float|null $nft_amount Non-fungible token amount
+     *
+     * @return $this
+     */
+    public function setNftAmount($nft_amount)
+    {
+        $this->container['nft_amount'] = $nft_amount;
 
         return $this;
     }

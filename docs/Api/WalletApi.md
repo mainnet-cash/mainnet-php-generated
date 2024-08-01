@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**encodeTransaction**](WalletApi.md#encodeTransaction) | **POST** /wallet/encode_transaction | Encode and sign a transaction given a list of sendRequests, options and estimate fees
 [**getAllNftTokenBalances**](WalletApi.md#getAllNftTokenBalances) | **POST** /wallet/get_all_nft_token_balances | Get non-fungible token balance
 [**getAllTokenBalances**](WalletApi.md#getAllTokenBalances) | **POST** /wallet/get_all_token_balances | Get non-fungible token balance
-[**getHistory**](WalletApi.md#getHistory) | **POST** /wallet/get_history | Get a simplified list of transactions related to a wallet
+[**getHistory**](WalletApi.md#getHistory) | **POST** /wallet/get_history | Get a list of transactions related to a wallet
 [**getNftTokenBalance**](WalletApi.md#getNftTokenBalance) | **POST** /wallet/get_nft_token_balance | Get non-fungible token balance
 [**getTokenBalance**](WalletApi.md#getTokenBalance) | **POST** /wallet/get_token_balance | Get fungible token balance
 [**getTokenUtxos**](WalletApi.md#getTokenUtxos) | **POST** /wallet/get_token_utxos | Get token utxos
@@ -447,9 +447,9 @@ Name | Type | Description  | Notes
 
 ## getHistory
 
-> \Mainnet\Model\HistoryResponse getHistory($history_request)
+> \Mainnet\Model\TransactionHistoryItem[] getHistory($history_request)
 
-Get a simplified list of transactions related to a wallet
+Get a list of transactions related to a wallet
 
 ### Example
 
@@ -468,7 +468,7 @@ $apiInstance = new Mainnet\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$history_request = new \Mainnet\Model\HistoryRequest(); // \Mainnet\Model\HistoryRequest | Request for a wallet history
+$history_request = new \Mainnet\Model\HistoryRequest(); // \Mainnet\Model\HistoryRequest | Gets transaction history of this wallet with most data decoded and ready to present to user   Note: balance calculations are valid only if querying to the blockchain tip (`toHeight` === -1, `count` === -1)   Note: this method is heavy on network calls, if invoked in browser use of cache is advised, @see `Config.UseLocalStorageCache`   Note: this method tries to recreate the history tab view of Electron Cash wallet, however, it may not be 100% accurate if the tnransaction value changes are the same in the same block (ordering)
 
 try {
     $result = $apiInstance->getHistory($history_request);
@@ -484,11 +484,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **history_request** | [**\Mainnet\Model\HistoryRequest**](../Model/HistoryRequest.md)| Request for a wallet history |
+ **history_request** | [**\Mainnet\Model\HistoryRequest**](../Model/HistoryRequest.md)| Gets transaction history of this wallet with most data decoded and ready to present to user   Note: balance calculations are valid only if querying to the blockchain tip (&#x60;toHeight&#x60; &#x3D;&#x3D;&#x3D; -1, &#x60;count&#x60; &#x3D;&#x3D;&#x3D; -1)   Note: this method is heavy on network calls, if invoked in browser use of cache is advised, @see &#x60;Config.UseLocalStorageCache&#x60;   Note: this method tries to recreate the history tab view of Electron Cash wallet, however, it may not be 100% accurate if the tnransaction value changes are the same in the same block (ordering) |
 
 ### Return type
 
-[**\Mainnet\Model\HistoryResponse**](../Model/HistoryResponse.md)
+[**\Mainnet\Model\TransactionHistoryItem[]**](../Model/TransactionHistoryItem.md)
 
 ### Authorization
 

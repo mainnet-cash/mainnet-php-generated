@@ -1,6 +1,6 @@
 <?php
 /**
- * XPubKeyRequestTest
+ * TokenAmountChangeTest
  *
  * PHP version 7.2
  *
@@ -32,15 +32,15 @@ namespace Mainnet;
 use PHPUnit\Framework\TestCase;
 
 /**
- * XPubKeyRequestTest Class Doc Comment
+ * TokenAmountChangeTest Class Doc Comment
  *
  * @category    Class
- * @description XPubKeyRequest
+ * @description TokenAmountChange
  * @package     Mainnet
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class XPubKeyRequestTest extends TestCase
+class TokenAmountChangeTest extends TestCase
 {
 
     /**
@@ -72,23 +72,30 @@ class XPubKeyRequestTest extends TestCase
     }
 
     /**
-     * Test "XPubKeyRequest"
+     * Test "TokenAmountChange"
      */
-    public function testXPubKeyRequest()
+    public function testTokenAmountChange()
     {
     }
 
     /**
-     * Test attribute "wallet_id"
+     * Test attribute "token_id"
      */
-    public function testPropertyWalletId()
+    public function testPropertyTokenId()
     {
     }
 
     /**
-     * Test attribute "paths"
+     * Test attribute "amount"
      */
-    public function testPropertyPaths()
+    public function testPropertyAmount()
+    {
+    }
+
+    /**
+     * Test attribute "nft_amount"
+     */
+    public function testPropertyNftAmount()
     {
     }
 }
