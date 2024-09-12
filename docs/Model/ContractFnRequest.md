@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contract_id** | **string** | serialized contract | 
-**action** | **string** | In addition to &#x60;send&#x60;ing the built transaction, the built transaction hex may be returned (without broadcasting) with &#x60;build&#x60; action, or the [&#x60;meep 🔗&#x60;](https://github.com/gcash/meep) debugger command. | [optional] [default to 'send']
+**action** | **string** | In addition to &#x60;send&#x60;ing the built transaction, the built transaction hex may be returned (without broadcasting) with &#x60;build&#x60; action. | [optional] [default to 'send']
 **function** | **string** | Function to call on the cashscript contract. | 
 **arguments** | **string[]** | Arguments for the contract function call as strings.  Binary data should be passed as hexidecimal.  Signatures may be passed as wallet import format (WIF) or wallet strings (walletId). Cashscript expects &#x60;pubkey&#x60;s to be compressed 35 byte values. | [optional] 
 **to** | [**AnyOfSendRequestItemArrayCashscriptReceiptArray**](AnyOfSendRequestItemArrayCashscriptReceiptArray.md) | The output destination, as a SendRequest, cashscript style output(s), array of either. | 
