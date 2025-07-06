@@ -59,7 +59,6 @@ docs/Model/MaxAmountToSendRequest.md
 docs/Model/MineRequest.md
 docs/Model/NetworkEnum.md
 docs/Model/OpReturnData.md
-docs/Model/ScalableVectorGraphic.md
 docs/Model/SendMaxRequest.md
 docs/Model/SendMaxResponse.md
 docs/Model/SendRequest.md
@@ -161,7 +160,6 @@ lib/Model/MineRequest.php
 lib/Model/ModelInterface.php
 lib/Model/NetworkEnum.php
 lib/Model/OpReturnData.php
-lib/Model/ScalableVectorGraphic.php
 lib/Model/SendMaxRequest.php
 lib/Model/SendMaxResponse.php
 lib/Model/SendRequest.php
@@ -260,7 +258,6 @@ test/Model/MaxAmountToSendRequestTest.php
 test/Model/MineRequestTest.php
 test/Model/NetworkEnumTest.php
 test/Model/OpReturnDataTest.php
-test/Model/ScalableVectorGraphicTest.php
 test/Model/SendMaxRequestTest.php
 test/Model/SendMaxResponseTest.php
 test/Model/SendRequestItemAnyOfTest.php

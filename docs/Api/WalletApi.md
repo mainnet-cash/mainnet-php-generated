@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**balance**](WalletApi.md#balance) | **POST** /wallet/balance | Get total balance for wallet
 [**createWallet**](WalletApi.md#createWallet) | **POST** /wallet/create | create a new wallet
 [**depositAddress**](WalletApi.md#depositAddress) | **POST** /wallet/deposit_address | Get a deposit address in cash address format
-[**depositQr**](WalletApi.md#depositQr) | **POST** /wallet/deposit_qr | Get receiving cash address as a qrcode
 [**encodeTransaction**](WalletApi.md#encodeTransaction) | **POST** /wallet/encode_transaction | Encode and sign a transaction given a list of sendRequests, options and estimate fees
 [**getAllNftTokenBalances**](WalletApi.md#getAllNftTokenBalances) | **POST** /wallet/get_all_nft_token_balances | Get non-fungible token balance
 [**getAllTokenBalances**](WalletApi.md#getAllTokenBalances) | **POST** /wallet/get_all_token_balances | Get non-fungible token balance
@@ -24,7 +23,6 @@ Method | HTTP request | Description
 [**submitTransaction**](WalletApi.md#submitTransaction) | **POST** /wallet/submit_transaction | submit an encoded and signed transaction to the network
 [**tokenBurn**](WalletApi.md#tokenBurn) | **POST** /wallet/token_burn | Perform an explicit token burn
 [**tokenDepositAddress**](WalletApi.md#tokenDepositAddress) | **POST** /wallet/token_deposit_address | Get a token aware deposit address in cash address format
-[**tokenDepositQr**](WalletApi.md#tokenDepositQr) | **POST** /wallet/token_deposit_qr | Get receiving token aware cash address as a qrcode
 [**tokenGenesis**](WalletApi.md#tokenGenesis) | **POST** /wallet/token_genesis | Create new token category
 [**tokenMint**](WalletApi.md#tokenMint) | **POST** /wallet/token_mint | Mint new non-fungible tokens
 [**utxos**](WalletApi.md#utxos) | **POST** /wallet/utxo | Get detailed information about unspent outputs (utxos)
@@ -194,65 +192,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Mainnet\Model\DepositAddressResponse**](../Model/DepositAddressResponse.md)
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## depositQr
-
-> \Mainnet\Model\ScalableVectorGraphic depositQr($serialized_wallet)
-
-Get receiving cash address as a qrcode
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Mainnet\Api\WalletApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$serialized_wallet = new \Mainnet\Model\SerializedWallet(); // \Mainnet\Model\SerializedWallet | Request for a deposit cash address as a Quick Response code (qrcode)
-
-try {
-    $result = $apiInstance->depositQr($serialized_wallet);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WalletApi->depositQr: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serialized_wallet** | [**\Mainnet\Model\SerializedWallet**](../Model/SerializedWallet.md)| Request for a deposit cash address as a Quick Response code (qrcode) |
-
-### Return type
-
-[**\Mainnet\Model\ScalableVectorGraphic**](../Model/ScalableVectorGraphic.md)
 
 ### Authorization
 
@@ -1197,65 +1136,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Mainnet\Model\DepositAddressResponse**](../Model/DepositAddressResponse.md)
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## tokenDepositQr
-
-> \Mainnet\Model\ScalableVectorGraphic tokenDepositQr($serialized_wallet)
-
-Get receiving token aware cash address as a qrcode
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Mainnet\Api\WalletApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$serialized_wallet = new \Mainnet\Model\SerializedWallet(); // \Mainnet\Model\SerializedWallet | Request for a token aware deposit cash address as a Quick Response code (qrcode)
-
-try {
-    $result = $apiInstance->tokenDepositQr($serialized_wallet);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WalletApi->tokenDepositQr: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serialized_wallet** | [**\Mainnet\Model\SerializedWallet**](../Model/SerializedWallet.md)| Request for a token aware deposit cash address as a Quick Response code (qrcode) |
-
-### Return type
-
-[**\Mainnet\Model\ScalableVectorGraphic**](../Model/ScalableVectorGraphic.md)
 
 ### Authorization
 
