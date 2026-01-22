@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json, text/plain
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../../README.md#documentation-for-models)
@@ -268,7 +268,66 @@ Name | Type | Description  | Notes
 
 ## getAllNftTokenBalances
 
-> map[string,float] getAllNftTokenBalances($inline_object4)
+> map[string,float] getAllNftTokenBalances($inline_object5)
+
+Get non-fungible token balance
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$inline_object5 = new \Mainnet\Model\InlineObject5(); // \Mainnet\Model\InlineObject5 | 
+
+try {
+    $result = $apiInstance->getAllNftTokenBalances($inline_object5);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WalletApi->getAllNftTokenBalances: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inline_object5** | [**\Mainnet\Model\InlineObject5**](../Model/InlineObject5.md)|  |
+
+### Return type
+
+**map[string,float]**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getAllTokenBalances
+
+> map[string,float] getAllTokenBalances($inline_object4)
 
 Get non-fungible token balance
 
@@ -292,66 +351,7 @@ $apiInstance = new Mainnet\Api\WalletApi(
 $inline_object4 = new \Mainnet\Model\InlineObject4(); // \Mainnet\Model\InlineObject4 | 
 
 try {
-    $result = $apiInstance->getAllNftTokenBalances($inline_object4);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WalletApi->getAllNftTokenBalances: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inline_object4** | [**\Mainnet\Model\InlineObject4**](../Model/InlineObject4.md)|  |
-
-### Return type
-
-**map[string,float]**
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## getAllTokenBalances
-
-> map[string,float] getAllTokenBalances($inline_object3)
-
-Get non-fungible token balance
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Mainnet\Api\WalletApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$inline_object3 = new \Mainnet\Model\InlineObject3(); // \Mainnet\Model\InlineObject3 | 
-
-try {
-    $result = $apiInstance->getAllTokenBalances($inline_object3);
+    $result = $apiInstance->getAllTokenBalances($inline_object4);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getAllTokenBalances: ', $e->getMessage(), PHP_EOL;
@@ -364,7 +364,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object3** | [**\Mainnet\Model\InlineObject3**](../Model/InlineObject3.md)|  |
+ **inline_object4** | [**\Mainnet\Model\InlineObject4**](../Model/InlineObject4.md)|  |
 
 ### Return type
 
@@ -445,9 +445,68 @@ Name | Type | Description  | Notes
 
 ## getNftTokenBalance
 
-> object getNftTokenBalance($inline_object2)
+> object getNftTokenBalance($inline_object3)
 
 Get non-fungible token balance
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mainnet\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$inline_object3 = new \Mainnet\Model\InlineObject3(); // \Mainnet\Model\InlineObject3 | 
+
+try {
+    $result = $apiInstance->getNftTokenBalance($inline_object3);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WalletApi->getNftTokenBalance: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inline_object3** | [**\Mainnet\Model\InlineObject3**](../Model/InlineObject3.md)|  |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getTokenBalance
+
+> object getTokenBalance($inline_object2)
+
+Get fungible token balance
 
 ### Example
 
@@ -469,10 +528,10 @@ $apiInstance = new Mainnet\Api\WalletApi(
 $inline_object2 = new \Mainnet\Model\InlineObject2(); // \Mainnet\Model\InlineObject2 | 
 
 try {
-    $result = $apiInstance->getNftTokenBalance($inline_object2);
+    $result = $apiInstance->getTokenBalance($inline_object2);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WalletApi->getNftTokenBalance: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WalletApi->getTokenBalance: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -502,11 +561,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../../README.md)
 
 
-## getTokenBalance
+## getTokenUtxos
 
-> object getTokenBalance($inline_object1)
+> \Mainnet\Model\Utxo[] getTokenUtxos($inline_object1)
 
-Get fungible token balance
+Get token utxos
 
 ### Example
 
@@ -528,66 +587,7 @@ $apiInstance = new Mainnet\Api\WalletApi(
 $inline_object1 = new \Mainnet\Model\InlineObject1(); // \Mainnet\Model\InlineObject1 | 
 
 try {
-    $result = $apiInstance->getTokenBalance($inline_object1);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WalletApi->getTokenBalance: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inline_object1** | [**\Mainnet\Model\InlineObject1**](../Model/InlineObject1.md)|  |
-
-### Return type
-
-**object**
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## getTokenUtxos
-
-> \Mainnet\Model\Utxo[] getTokenUtxos($inline_object)
-
-Get token utxos
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = Mainnet\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Mainnet\Api\WalletApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$inline_object = new \Mainnet\Model\InlineObject(); // \Mainnet\Model\InlineObject | 
-
-try {
-    $result = $apiInstance->getTokenUtxos($inline_object);
+    $result = $apiInstance->getTokenUtxos($inline_object1);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getTokenUtxos: ', $e->getMessage(), PHP_EOL;
@@ -600,7 +600,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object** | [**\Mainnet\Model\InlineObject**](../Model/InlineObject.md)|  |
+ **inline_object1** | [**\Mainnet\Model\InlineObject1**](../Model/InlineObject1.md)|  |
 
 ### Return type
 

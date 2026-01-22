@@ -16,6 +16,7 @@ docs/Model/AuthChainElement.md
 docs/Model/BalanceRequest.md
 docs/Model/BalanceResponse.md
 docs/Model/ConvertRequest.md
+docs/Model/ConvertResponse.md
 docs/Model/CreateSignedMessageRequest.md
 docs/Model/DepositAddressResponse.md
 docs/Model/ElectrumRawTransaction.md
@@ -39,6 +40,8 @@ docs/Model/InlineObject1.md
 docs/Model/InlineObject2.md
 docs/Model/InlineObject3.md
 docs/Model/InlineObject4.md
+docs/Model/InlineObject5.md
+docs/Model/InlineResponse200.md
 docs/Model/MaxAmountToSendRequest.md
 docs/Model/MineRequest.md
 docs/Model/NetworkEnum.md
@@ -83,7 +86,6 @@ docs/Model/Wif.md
 docs/Model/XPubKey.md
 docs/Model/XPubKeyRequest.md
 docs/Model/XPubKeyResponse.md
-docs/Model/ZeroBalanceResponse.md
 git_push.sh
 lib/Api/FaucetApi.php
 lib/Api/MineApi.php
@@ -100,6 +102,7 @@ lib/Model/AuthChainElement.php
 lib/Model/BalanceRequest.php
 lib/Model/BalanceResponse.php
 lib/Model/ConvertRequest.php
+lib/Model/ConvertResponse.php
 lib/Model/CreateSignedMessageRequest.php
 lib/Model/DepositAddressResponse.php
 lib/Model/ElectrumRawTransaction.php
@@ -123,6 +126,8 @@ lib/Model/InlineObject1.php
 lib/Model/InlineObject2.php
 lib/Model/InlineObject3.php
 lib/Model/InlineObject4.php
+lib/Model/InlineObject5.php
+lib/Model/InlineResponse200.php
 lib/Model/MaxAmountToSendRequest.php
 lib/Model/MineRequest.php
 lib/Model/ModelInterface.php
@@ -168,7 +173,6 @@ lib/Model/Wif.php
 lib/Model/XPubKey.php
 lib/Model/XPubKeyRequest.php
 lib/Model/XPubKeyResponse.php
-lib/Model/ZeroBalanceResponse.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/FaucetApiTest.php
@@ -183,6 +187,7 @@ test/Model/AuthChainElementTest.php
 test/Model/BalanceRequestTest.php
 test/Model/BalanceResponseTest.php
 test/Model/ConvertRequestTest.php
+test/Model/ConvertResponseTest.php
 test/Model/CreateSignedMessageRequestTest.php
 test/Model/DepositAddressResponseTest.php
 test/Model/ElectrumRawTransactionScriptPubKeyTest.php
@@ -205,7 +210,9 @@ test/Model/InlineObject1Test.php
 test/Model/InlineObject2Test.php
 test/Model/InlineObject3Test.php
 test/Model/InlineObject4Test.php
+test/Model/InlineObject5Test.php
 test/Model/InlineObjectTest.php
+test/Model/InlineResponse200Test.php
 test/Model/MaxAmountToSendRequestTest.php
 test/Model/MineRequestTest.php
 test/Model/NetworkEnumTest.php
@@ -250,4 +257,3 @@ test/Model/WifTest.php
 test/Model/XPubKeyRequestTest.php
 test/Model/XPubKeyResponseTest.php
 test/Model/XPubKeyTest.php
-test/Model/ZeroBalanceResponseTest.php
