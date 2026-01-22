@@ -1,11 +1,10 @@
-# # ContractRequest
+# # InlineObject5
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**script** | **string** | The smart contract in cashscript syntax | 
-**parameters** | **string[]** | Parameters to construct the contract | 
+**wallet_id** | **string** | The walletId to make a request to. | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
