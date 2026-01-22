@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tx_id** | **string** | The hash of a transaction | [optional] 
-**balance** | **string** | Balance in satoshis in string format to avoid precision loss | [optional] 
+**balance** | [**\Mainnet\Model\BalanceResponse**](BalanceResponse.md) |  | [optional] 
 **explorer_url** | **string** | Web url to a transaction on a block explorer | [optional] 
 **token_ids** | **string[]** |  | [optional] 
 
