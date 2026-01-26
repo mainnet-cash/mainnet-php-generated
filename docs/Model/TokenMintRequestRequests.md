@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nft** | [**\Mainnet\Model\TokenNft**](TokenNft.md) |  | [optional] 
+**capability** | **string** | Capability of the new NFT | [optional] 
+**commitment** | **string** | Token commitment message, hexadecimal encoded, 40 bytes max length | [optional] 
 **cashaddr** | **string** | Cashaddress to send tokens to | [optional] 
 **value** | **float** | Satoshi value to send alongside with tokens | [optional] [default to 1000]
 
