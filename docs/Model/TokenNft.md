@@ -1,12 +1,11 @@
-# # ContractFnResponse
+# # TokenNft
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contract_id** | **string** | serialized contract | [optional] 
-**tx_id** | **string** | The hash of a transaction | [optional] 
-**hex** | **string** | The transaction as bitcoin encoded hex. | [optional] 
+**capability** | **string** | Capability of the NFT | 
+**commitment** | **string** | Token commitment message, hexadecimal encoded, 40 bytes max length | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
